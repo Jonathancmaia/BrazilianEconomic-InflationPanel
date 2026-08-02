@@ -1,4 +1,4 @@
-# 📊 Painel de Indicadores Macroeconômicos & Inflação (BACEN)
+# Painel de Indicadores Macroeconômicos & Inflação (BACEN)
 
 > **Projeto de Analytics / Business Intelligence**  
  **Acesse o Dashboard ao vivo:** [Link do seu GitHub Pages aqui](https://jonathancmaia.github.io/BrazilianEconomic-InflationPanel/)
