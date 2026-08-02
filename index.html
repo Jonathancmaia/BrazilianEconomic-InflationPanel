@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel Econômico & Inflação</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Painel Econômico & Inflação</h1>
+      <p>Dashboard de macroeconomia brasileira com dados do Banco Central (API SGS).</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="kpi-grid" aria-label="Indicadores chave">
+      <article class="kpi-card">
+        <span class="kpi-label">Inflação Acumulada 12 meses</span>
+        <strong id="kpi-inflacao">Carregando...</strong>
+      </article>
+      <article class="kpi-card">
+        <span class="kpi-label">Taxa Selic Atual</span>
+        <strong id="kpi-selic">Carregando...</strong>
+      </article>
+      <article class="kpi-card">
+        <span class="kpi-label">Cotação do Dólar Hoje</span>
+        <strong id="kpi-dolar">Carregando...</strong>
+      </article>
+    </section>
+
+    <section class="controls">
+      <div>
+        <label for="range-select">Intervalo de datas</label>
+        <select id="range-select">
+          <option value="6">Últimos 6 meses</option>
+          <option value="12" selected>Último ano</option>
+          <option value="60">Últimos 5 anos</option>
+          <option value="120">Últimos 10 anos</option>
+        </select>
+      </div>
+      <div class="data-note" id="data-range">Carregando dados...</div>
+    </section>
+
+    <section class="charts">
+      <article class="chart-card">
+        <h2>IPCA vs Meta de Inflação</h2>
+        <canvas id="chart-ipca"></canvas>
+      </article>
+      <article class="chart-card">
+        <h2>Histórico da Taxa Selic</h2>
+        <canvas id="chart-selic"></canvas>
+      </article>
+      <article class="chart-card">
+        <h2>Dólar vs Selic</h2>
+        <canvas id="chart-dolar-selic"></canvas>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <h3>Insight de Negócio</h3>
+    <p>
+      A taxa Selic é o principal mecanismo de controle inflacionário no Brasil. Quando o Banco Central eleva a Selic, aumenta o custo do crédito para empresas e consumidores, reduzindo investimentos e consumo. Isso desacelera a demanda, ajuda a conter pressões inflacionárias e fortalece o real, mas também pode frear o ritmo de crescimento econômico. Por outro lado, cortes na Selic tornam empréstimos mais baratos, estimulam consumo e investimento, mas tendem a aumentar a inflação se o crescimento da demanda superar a oferta.
+    </p>
+  </footer>
+</body>
+</html>
